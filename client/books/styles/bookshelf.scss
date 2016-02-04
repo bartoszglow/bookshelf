@@ -1,0 +1,41 @@
+.bookshelf {
+  &__filters {
+    margin-bottom: 20px;
+    &-category.btn {
+      color: #fff;
+    }
+  }
+
+  &__order {
+    margin-bottom: 20px;
+    text-align: right;
+  }
+
+  &__categories {
+    a.btn {
+      color: #fff;
+    }
+  }
+
+  &__form {
+    width: 20%;
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &-switch {
+      margin-top: 80px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .bookshelf {
+    &__order {
+      text-align: left;
+      margin-left: 5px;
+    }
+  }
+}
