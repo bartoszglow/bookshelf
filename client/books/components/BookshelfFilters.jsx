@@ -52,7 +52,6 @@ BookshelfFilters = React.createClass({
           <span>Order by:</span>
           <a className="btn btn-default" href="#title" onClick={this.orderChange}>Title</a>
           <a className="btn btn-default" href="#author.name" onClick={this.orderChange}>Author</a>
-          <a className="btn btn-default" href="#category.name" onClick={this.orderChange}>Category</a>
         </div>
       </section>
     );

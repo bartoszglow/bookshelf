@@ -25,7 +25,7 @@ BookInformations = React.createClass({
   },
   render() {
     return (
-      <div className="book__informations panel panel-default">
+      <div className="book__informations panel panel-default"  style={{ borderColor: this.props.book.category.color }}>
         <div className="panel-heading" style={{ backgroundColor: this.props.book.category.color }}>
           <h4 className="book__informations-title">{this.props.book.title}</h4>
           <p className="book__informations-author">{this.props.book.author.name}</p>

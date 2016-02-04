@@ -13,6 +13,10 @@ Bookshelf = React.createClass({
 
     books = Books.find(category ? {'category.name' : category} : {}, order).fetch();
 
+    books = _.sortBy(books, function(book) {
+      return book.category.name;
+    });
+
     for(let i = 0, j = books.length, chunk = 5; i < j; i += chunk) {
       bookshelfs.push(books.slice(i, i + chunk));
     }
@@ -31,8 +35,9 @@ Bookshelf = React.createClass({
   },
 
   renderForm(bookshelf) {
-    // Display form only for last bookshelf
+    // Display form only on last bookshelf
     if(this.data.bookshelfs.indexOf(bookshelf) + 1 === this.data.bookshelfs.length) {
+      // TO BE CONTINUED
       // return (
       //   <BookshelfForm />
       // );
